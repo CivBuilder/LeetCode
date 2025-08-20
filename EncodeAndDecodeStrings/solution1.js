@@ -11,7 +11,7 @@ class Solution {
         let str = "";
 
         for (const currStr of strs) {
-            str += `${currStr.length}#${currStr}`;
+            str += `${currStr.length}#${currStr}`;  // insert length of string, delimiter, and element into string
         }
 
         return str;
@@ -36,11 +36,11 @@ class Solution {
                 j++;
             }
 
-            let length = parseInt(str.substring(i, j));
+            let length = parseInt(str.substring(i, j));  // get the string's length
 
-            i = j + 1 + length; // second pointer (int) + 1 (delimeter) + length (length of word)
+            i = j + 1 + length; // second pointer (string's length) + 1 (delimiter) + length (length of word)
 
-            strs.push(str.substring(j + 1, i));
+            strs.push(str.substring(j + 1, i));  // j + 1 skips the delimiter
         }
 
         return strs;
